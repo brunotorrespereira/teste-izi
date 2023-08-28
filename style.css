@@ -1,0 +1,11 @@
+#output{
+  padding: 15px;
+  border-radius: 4px;
+ background-color: #DCDCDC;
+}
+h1{
+  text-align: center;
+  background-color: #B0C4DE;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa Izi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>PROGRAMA IZI</h1>
+  <div id="output"></div> 
+
+    <script>
+        const numeros = Array.from({ length: 50 }, (_, index) => index + 1);
+        let i = 0;
+    
+        // function imprimirNumero() { ... }: Define uma função chamada "imprimirNumero". Esta função será chamada repetidamente para imprimir os números.
+        function imprimirNumero() {
+            const numero = numeros[i]; 
+            const outputDiv = document.getElementById("output");
+
+// o id "output". Esse elemento será usado para exibir os números.
+
+            if (numero % 3 === 0 && numero % 5 === 0) {
+                outputDiv.innerHTML += 'FizzBuzz<br>';
+            } else if (numero % 3 === 0) {
+                outputDiv.innerHTML += 'Fizz<br>';
+            } else if (numero % 5 === 0) {
+                outputDiv.innerHTML += 'Buzz<br>';
+            } else {
+                outputDiv.innerHTML += numero + '<br>';
+            }
+
+            i++; // Incrementa o índice
+
+            if (i < numeros.length) {
+                setTimeout(imprimirNumero, 1000); // Chama a função novamente após 1 segundo
+            }
+        }
+
+        imprimirNumero(); // Inicia a impressão
+    </script>
+</body>
+</html>
